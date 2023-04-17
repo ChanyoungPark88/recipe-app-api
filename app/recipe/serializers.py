@@ -10,7 +10,7 @@ from core.models import (
 
 
 class TagSerializer(serializers.ModelSerializer):
-    """Serializer for tags"""
+    """Serializer for tags."""
 
     class Meta:
         model = Tag
@@ -19,7 +19,7 @@ class TagSerializer(serializers.ModelSerializer):
 
 
 class RecipeSerializer(serializers.ModelSerializer):
-    """Serializer for recipe."""
+    """Serializer for recipes."""
     tags = TagSerializer(many=True, required=False)
 
     class Meta:
