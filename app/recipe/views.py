@@ -6,8 +6,8 @@ from drf_spectacular.utils import (
     extend_schema,
     OpenApiParameter,
     OpenApiTypes,
-
 )
+
 from rest_framework import (
     viewsets,
     mixins,
@@ -38,7 +38,7 @@ from recipe import serializers
                 'ingredients',
                 OpenApiTypes.STR,
                 description='Comma separated list of ingredient IDs to filter.',
-            )
+            ),
         ]
     )
 )

@@ -107,7 +107,7 @@ class PrivateIngredientsApiTests(TestCase):
             title='Apple Crumble',
             time_minutes=5,
             price=Decimal('4.50'),
-            user=self.user
+            user=self.user,
         )
         recipe.ingredients.add(in1)
 
@@ -132,7 +132,7 @@ class PrivateIngredientsApiTests(TestCase):
             title='Herb Eggs',
             time_minutes=20,
             price=Decimal('4.00'),
-            user=self.user
+            user=self.user,
         )
         recipe1.ingredients.add(ing)
         recipe2.ingredients.add(ing)
