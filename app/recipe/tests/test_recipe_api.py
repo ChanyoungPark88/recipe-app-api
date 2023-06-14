@@ -213,7 +213,7 @@ class PrivateRecipeApiTests(TestCase):
             'title': 'Thai Prawn Curry',
             'time_minutes': 30,
             'price': Decimal('2.50'),
-            'tags': [{'name': 'Thai'}, {'name': 'Dinner'}]
+            'tags': [{'name': 'Thai'}, {'name': 'Dinner'}],
         }
         res = self.client.post(RECIPES_URL, payload, format='json')
 
@@ -315,7 +315,7 @@ class PrivateRecipeApiTests(TestCase):
             ).exists()
             self.assertTrue(exists)
 
-    def test_create_recipe_with_existing_ingredients(self):
+    def test_create_recipe_with_existing_ingredient(self):
         """Test creating a recipe with existing ingredient."""
         ingredient = Ingredient.objects.create(user=self.user, name='Lemon')
         payload = {
